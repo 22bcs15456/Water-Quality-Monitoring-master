@@ -7,6 +7,35 @@ This project aims to develop a Complaint Management System to streamline the pro
 - To develop a platform for reporting water quality complaints.
 - To implement a system to manage and visualize submissions.
 
+## Requirements
+
+- Java 21 LTS
+- Node.js 18 or newer
+- MySQL 8 or newer for local backend development
+
+## Running the Project
+
+### Backend
+
+Configure the MySQL connection in `backend/src/main/resources/application.properties`, then run:
+
+```powershell
+cd backend
+.\mvnw.cmd clean verify
+.\mvnw.cmd spring-boot:run
+```
+
+The backend is available at `http://localhost:8081`. Backend tests use an in-memory H2 database and do not require MySQL.
+
+### Frontend
+
+```powershell
+npm ci
+npm start
+```
+
+The frontend is available at `http://localhost:3000`.
+
 ## SDG 6 Alignment
 
 The WQM platform supports Sustainable Development Goal 6 (SDG 6) by providing tools and resources to improve water quality and promote sustainable water monitoring practices. Through our complaint management system, we address water quality issues promptly, contributing to the goal of ensuring availability and sustainable management of water and sanitation for all.
@@ -41,7 +70,7 @@ We applied systems thinking to analyze the intricate interactions involved in wa
   - **React.js** is used for building the user interface of the platform. It provides a component-based architecture that enhances the development of interactive and dynamic web applications.
 
 - **Backend:** 
-  - **Spring Boot** is used for creating the backend services. It simplifies the development of production-ready applications with its embedded server and wide range of libraries.
+  - **Spring Boot 3.3** on **Java 21 LTS** is used for creating the backend services. It simplifies the development of production-ready applications with its embedded server and wide range of libraries.
 
 - **Database:** 
   - **MySQL** is utilized for managing and storing data. It is a reliable relational database management system that ensures data integrity and supports complex queries.
